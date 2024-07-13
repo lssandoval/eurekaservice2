@@ -1,0 +1,11 @@
+ec\edu\monster\prueba\PruebaMovimiento.class
+ec\edu\monster\db\AccesoDB.class
+com\mycompany\ws_eureka2\JAXRSConfiguration.class
+com\mycompany\ws_eureka2\resources\JavaEE8Resource.class
+ec\edu\monster\prueba\PruebaConexionDB.class
+ec\edu\monster\prueba\PruebaLogin.class
+ec\edu\monster\db\CrearUsuario.class
+ec\edu\monster\prueba\PruebaDeposito.class
+ec\edu\monster\ws\WSEureka.class
+ec\edu\monster\modelo\Movimiento.class
+ec\edu\monster\servicio\EurekaService.class
