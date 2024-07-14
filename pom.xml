@@ -16,7 +16,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <failOnMissingWebXml>false</failOnMissingWebXml>
         <jakartaee>8.0</jakartaee>
-         <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
         <mainClass>com.mycompany.ws_eureka2</mainClass> 
     </properties>
@@ -48,7 +48,7 @@
         </dependency>
     </dependencies>
     
-     <build>
+    <build>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -67,7 +67,9 @@
                 <artifactId>maven-war-plugin</artifactId>
                 <version>3.3.2</version> 
                 <configuration>
+                    <warName>WS_Eureka2</warName>
                     <failOnMissingWebXml>false</failOnMissingWebXml>
+                    <!-- Otros ajustes si son necesarios -->
                 </configuration>
             </plugin>
             <plugin>
@@ -119,13 +121,13 @@
                 </configuration>
             </plugin>
             <plugin>
-            <groupId>com.heroku.sdk</groupId>
-            <artifactId>heroku-maven-plugin</artifactId>
-            <version>3.0.3</version>
-            <configuration>
-                <appName>eurekaservice2</appName>
-            </configuration>
-        </plugin>
+                <groupId>com.heroku.sdk</groupId>
+                <artifactId>heroku-maven-plugin</artifactId>
+                <version>3.0.3</version>
+                <configuration>
+                    <appName>eurekaservice2</appName>
+                </configuration>
+            </plugin>
         </plugins>
         
         
