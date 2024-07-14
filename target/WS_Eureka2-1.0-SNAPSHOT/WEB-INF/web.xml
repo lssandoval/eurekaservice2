@@ -1,11 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
-   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-   xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
-   version="4.0">
-    <session-config>
-        <session-timeout>
-            30
-        </session-timeout>
-    </session-config>
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+         version="4.0">
+
+    <!-- Configuración del servlet para JAX-WS -->
+    <servlet>
+        <servlet-name>WSEureka</servlet-name>
+        <servlet-class>com.sun.xml.ws.transport.http.servlet.WSServlet</servlet-class>
+        <init-param>
+            <param-name>com.sun.xml.ws.transport.http.servlet.WSServletContextListener</param-name>
+            <param-value>com.mycompany.ws_eureka2.JAXRSConfiguration</param-value>
+        </init-param>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+
+    <!-- Mapeo del servlet para JAX-WS -->
+    <servlet-mapping>
+        <servlet-name>WSEureka</servlet-name>
+        <url-pattern>/services/*</url-pattern>
+    </servlet-mapping>
+
+    <!-- Opcional: Configuración de escuchadores (listeners), si es necesario -->
+    <!-- <listener>
+        <listener-class>com.mycompany.ws_eureka2.MyServletContextListener</listener-class>
+    </listener> -->
+
 </web-app>
